@@ -9,6 +9,7 @@ import androidx.room.Room;
 import dagger.Module;
 import dagger.Provides;
 import song.of.god.database.AppDatabase;
+import song.of.god.database.dao.TokenDao;
 
 import static song.of.god.application.AppConstants.DATABASE_NAME;
 
@@ -24,10 +25,10 @@ public class DbModule {
                 .allowMainThreadQueries().build();
     }
 
-//    @Provides
-//    @Singleton
-//    AudioDao provideAudioDao(@NonNull AppDatabase appDatabase) {
-//        return appDatabase.audioDao();
-//    }
+    @Provides
+    @Singleton
+    TokenDao provideAudioDao(@NonNull AppDatabase appDatabase) {
+        return appDatabase.tokenDao();
+    }
 
 }

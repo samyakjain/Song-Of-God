@@ -6,11 +6,15 @@ import android.os.Parcelable;
 import com.google.gson.annotations.Expose;
 import com.google.gson.annotations.SerializedName;
 
+import org.jetbrains.annotations.NotNull;
+
+import androidx.annotation.NonNull;
 import androidx.room.Entity;
 
 @Entity(primaryKeys = {"verseNumber","chapterNumber"})
 public class Verse implements Parcelable {
 
+    @NonNull
     @SerializedName("chapter_number")
     @Expose
     private Integer chapterNumber;
@@ -27,6 +31,8 @@ public class Verse implements Parcelable {
     @Expose
     private String transliteration;
 
+
+    @NonNull
     @SerializedName("verse_number")
     @Expose
     private Integer verseNumber;

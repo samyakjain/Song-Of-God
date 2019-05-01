@@ -32,7 +32,7 @@ public class AppModule {
     @Provides
     @Named(DiConstants.API_END_POINT)
     String providesBaseUrl() {
-        return "https://bhagavadgita.io/";
+        return "https://bhagavadgita.io";
     }
 
     @Provides
@@ -49,7 +49,7 @@ public class AppModule {
 
     @Provides
     @Singleton
-    OkHttpClient providesOkHttpClient(Application application, RequestInterceptor requestInterceptor, RestErrorInterceptor restErrorInterceptor) {
+    OkHttpClient providesOkHttpClient(RequestInterceptor requestInterceptor, RestErrorInterceptor restErrorInterceptor) {
         if (UtilityHelper.isDebugMode()) {
 
             HttpLoggingInterceptor loggingInterceptor = new HttpLoggingInterceptor();
