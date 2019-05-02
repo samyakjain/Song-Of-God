@@ -15,21 +15,21 @@ public class Chapter implements Parcelable {
     @Expose
     private Integer chapterNumber;
 
+    @SerializedName("chapter_summary")
+    @Expose
+    private String chapterSummary;
+
     @SerializedName("name")
     @Expose
     private String name;
 
-    @SerializedName("name_english")
+    @SerializedName("name_meaning")
     @Expose
-    private String nameEnglish;
+    private String nameMeaning;
 
-    @SerializedName("name_transliterated")
+    @SerializedName("name_translation")
     @Expose
-    private String nameTransliterated;
-
-    @SerializedName("name_transliterated_simple")
-    @Expose
-    private String nameTransliteratedSimple;
+    private String nameTranslation;
 
     @SerializedName("verses_count")
     @Expose
@@ -43,6 +43,14 @@ public class Chapter implements Parcelable {
         this.chapterNumber = chapterNumber;
     }
 
+    public String getChapterSummary() {
+        return chapterSummary;
+    }
+
+    public void setChapterSummary(String chapterSummary) {
+        this.chapterSummary = chapterSummary;
+    }
+
     public String getName() {
         return name;
     }
@@ -51,28 +59,20 @@ public class Chapter implements Parcelable {
         this.name = name;
     }
 
-    public String getNameEnglish() {
-        return nameEnglish;
+    public String getNameMeaning() {
+        return nameMeaning;
     }
 
-    public void setNameEnglish(String nameEnglish) {
-        this.nameEnglish = nameEnglish;
+    public void setNameMeaning(String nameMeaning) {
+        this.nameMeaning = nameMeaning;
     }
 
-    public String getNameTransliterated() {
-        return nameTransliterated;
+    public String getNameTranslation() {
+        return nameTranslation;
     }
 
-    public void setNameTransliterated(String nameTransliterated) {
-        this.nameTransliterated = nameTransliterated;
-    }
-
-    public String getNameTransliteratedSimple() {
-        return nameTransliteratedSimple;
-    }
-
-    public void setNameTransliteratedSimple(String nameTransliteratedSimple) {
-        this.nameTransliteratedSimple = nameTransliteratedSimple;
+    public void setNameTranslation(String nameTranslation) {
+        this.nameTranslation = nameTranslation;
     }
 
     public Integer getVersesCount() {
@@ -83,6 +83,7 @@ public class Chapter implements Parcelable {
         this.versesCount = versesCount;
     }
 
+
     @Override
     public int describeContents() {
         return 0;
@@ -91,10 +92,10 @@ public class Chapter implements Parcelable {
     @Override
     public void writeToParcel(Parcel dest, int flags) {
         dest.writeValue(this.chapterNumber);
+        dest.writeString(this.chapterSummary);
         dest.writeString(this.name);
-        dest.writeString(this.nameEnglish);
-        dest.writeString(this.nameTransliterated);
-        dest.writeString(this.nameTransliteratedSimple);
+        dest.writeString(this.nameMeaning);
+        dest.writeString(this.nameTranslation);
         dest.writeValue(this.versesCount);
     }
 
@@ -103,10 +104,10 @@ public class Chapter implements Parcelable {
 
     protected Chapter(Parcel in) {
         this.chapterNumber = (Integer) in.readValue(Integer.class.getClassLoader());
+        this.chapterSummary = in.readString();
         this.name = in.readString();
-        this.nameEnglish = in.readString();
-        this.nameTransliterated = in.readString();
-        this.nameTransliteratedSimple = in.readString();
+        this.nameMeaning = in.readString();
+        this.nameTranslation = in.readString();
         this.versesCount = (Integer) in.readValue(Integer.class.getClassLoader());
     }
 

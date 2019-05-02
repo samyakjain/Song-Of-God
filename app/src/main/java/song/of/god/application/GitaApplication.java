@@ -6,6 +6,7 @@ import android.app.Service;
 
 import javax.inject.Inject;
 
+import androidx.multidex.MultiDexApplication;
 import dagger.android.AndroidInjector;
 import dagger.android.DispatchingAndroidInjector;
 import dagger.android.HasActivityInjector;
@@ -14,7 +15,7 @@ import song.of.god.di.component.DaggerAppComponent;
 import song.of.god.util.UtilityHelper;
 import timber.log.Timber;
 
-public class GitaApplication extends Application implements HasActivityInjector, HasServiceInjector {
+public class GitaApplication extends MultiDexApplication implements HasActivityInjector, HasServiceInjector {
 
     @Inject
     DispatchingAndroidInjector<Activity> activityDispatchingAndroidInjector;

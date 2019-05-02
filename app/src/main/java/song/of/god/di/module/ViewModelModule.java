@@ -6,6 +6,7 @@ import dagger.Binds;
 import dagger.Module;
 import dagger.multibindings.IntoMap;
 import song.of.god.di.ViewModelProviderFactory;
+import song.of.god.ui.MainScreen.MainActivityViewModel;
 import song.of.god.ui.SplashScreen.SplashViewModel;
 
 @Module
@@ -18,6 +19,11 @@ public abstract class ViewModelModule {
     @IntoMap
     @ViewModelKey(SplashViewModel.class)
     protected abstract ViewModel bindSplashViewModel(SplashViewModel splashViewModel);
+
+    @Binds
+    @IntoMap
+    @ViewModelKey(MainActivityViewModel.class)
+    protected abstract ViewModel bindMainActivityViewModel(MainActivityViewModel mainActivityViewModel);
 
 
 }

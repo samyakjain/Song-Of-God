@@ -2,7 +2,7 @@ package song.of.god.di.module;
 
 import dagger.Module;
 import dagger.android.ContributesAndroidInjector;
-import song.of.god.ui.MainActivity;
+import song.of.god.ui.MainScreen.MainActivity;
 import song.of.god.ui.SplashScreen.SplashActivity;
 
 @Module

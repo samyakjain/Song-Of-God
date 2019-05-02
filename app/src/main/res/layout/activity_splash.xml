@@ -14,11 +14,11 @@
         android:textAlignment="center"
         android:textColor="#FF4F17"
         android:textSize="48dp"
-        app:layout_constraintBottom_toTopOf="@+id/imageView"
-        tools:layout_editor_absoluteX="0dp" />
+        app:layout_constraintBottom_toTopOf="@+id/iconImageView"
+        tools:layout_editor_absoluteX="16dp" />
 
     <ImageView
-        android:id="@+id/imageView"
+        android:id="@+id/iconImageView"
         android:layout_width="200dp"
         android:layout_height="200dp"
         android:layout_marginStart="8dp"
@@ -28,5 +28,16 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
+
+    <ProgressBar
+        android:id="@+id/progressCircular"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="20dp"
+        android:layout_marginEnd="8dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/iconImageView" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>

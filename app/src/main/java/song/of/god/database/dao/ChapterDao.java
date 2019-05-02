@@ -26,7 +26,7 @@ public interface ChapterDao {
     Chapter getChapterByChapterNumber(Long chapterNumber);
 
     @Query("SELECT * FROM `chapter`")
-    LiveData<List<Chapter>> getAllChapters(Long offset);
+    LiveData<List<Chapter>> getAllChapters();
 
 
 }
