@@ -79,7 +79,7 @@ public class SplashActivity extends BaseActivity {
         intent.putExtra(MainActivity.EXTRA_CIRCULAR_REVEAL_Y, revealY);
 
         ActivityCompat.startActivity(this, intent, options.toBundle());
-        new Handler().postDelayed(this::finish,1000);
+        new Handler().postDelayed(this::finish,500);
 
 
     }

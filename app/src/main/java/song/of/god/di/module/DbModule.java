@@ -11,6 +11,7 @@ import dagger.Provides;
 import song.of.god.database.AppDatabase;
 import song.of.god.database.dao.ChapterDao;
 import song.of.god.database.dao.TokenDao;
+import song.of.god.database.dao.VerseDao;
 
 import static song.of.god.application.AppConstants.DATABASE_NAME;
 
@@ -37,5 +38,13 @@ public class DbModule {
     ChapterDao provideChapterDao(@NonNull AppDatabase appDatabase) {
         return appDatabase.chapterDao();
     }
+
+    @Provides
+    @Singleton
+    VerseDao provideVerseDao(@NonNull AppDatabase appDatabase) {
+        return appDatabase.verseDao();
+    }
+
+
 
 }

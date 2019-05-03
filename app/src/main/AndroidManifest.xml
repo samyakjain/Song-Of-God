@@ -13,6 +13,9 @@
         android:roundIcon="@mipmap/ic_launcher"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
+        <activity android:name=".ui.ChapterDetailScreen.ChapterDetailActivity"
+            android:theme="@style/Theme.AppCompat.Light.NoActionBar"
+            />
         <activity
             android:name=".ui.SplashScreen.SplashActivity"
             android:theme="@style/Theme.AppCompat.Light.NoActionBar">
@@ -24,9 +27,7 @@
         </activity>
         <activity
             android:name=".ui.MainScreen.MainActivity"
-            android:theme="@style/AppTheme.Transparent">
-
-        </activity>
+            android:theme="@style/AppTheme.Transparent"></activity>
     </application>
 
 </manifest>

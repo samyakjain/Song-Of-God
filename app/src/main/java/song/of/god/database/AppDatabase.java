@@ -7,6 +7,7 @@ import androidx.room.Room;
 import androidx.room.RoomDatabase;
 import song.of.god.database.dao.ChapterDao;
 import song.of.god.database.dao.TokenDao;
+import song.of.god.database.dao.VerseDao;
 import song.of.god.database.entity.Chapter;
 import song.of.god.database.entity.Token;
 import song.of.god.database.entity.Verse;
@@ -19,6 +20,8 @@ public abstract class AppDatabase extends RoomDatabase {
     public abstract TokenDao tokenDao();
 
     public abstract ChapterDao chapterDao();
+
+    public abstract VerseDao verseDao();
 
     private static volatile AppDatabase INSTANCE;
 

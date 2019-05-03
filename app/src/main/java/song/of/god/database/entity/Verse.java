@@ -35,7 +35,7 @@ public class Verse implements Parcelable {
     @NonNull
     @SerializedName("verse_number")
     @Expose
-    private Integer verseNumber;
+    private String verseNumber;
 
     @SerializedName("word_meanings")
     @Expose
@@ -73,11 +73,12 @@ public class Verse implements Parcelable {
         this.transliteration = transliteration;
     }
 
-    public Integer getVerseNumber() {
+    @NonNull
+    public String getVerseNumber() {
         return verseNumber;
     }
 
-    public void setVerseNumber(Integer verseNumber) {
+    public void setVerseNumber(@NonNull String verseNumber) {
         this.verseNumber = verseNumber;
     }
 
@@ -90,6 +91,9 @@ public class Verse implements Parcelable {
     }
 
 
+    public Verse() {
+    }
+
     @Override
     public int describeContents() {
         return 0;
@@ -101,11 +105,8 @@ public class Verse implements Parcelable {
         dest.writeString(this.meaning);
         dest.writeString(this.text);
         dest.writeString(this.transliteration);
-        dest.writeValue(this.verseNumber);
+        dest.writeString(this.verseNumber);
         dest.writeString(this.wordMeanings);
-    }
-
-    public Verse() {
     }
 
     protected Verse(Parcel in) {
@@ -113,7 +114,7 @@ public class Verse implements Parcelable {
         this.meaning = in.readString();
         this.text = in.readString();
         this.transliteration = in.readString();
-        this.verseNumber = (Integer) in.readValue(Integer.class.getClassLoader());
+        this.verseNumber = in.readString();
         this.wordMeanings = in.readString();
     }
 

@@ -1,5 +1,6 @@
 package song.of.god.ui.MainScreen;
 
+import android.content.Intent;
 import android.graphics.Color;
 import android.view.LayoutInflater;
 import android.view.View;
@@ -13,8 +14,11 @@ import androidx.annotation.NonNull;
 import androidx.recyclerview.widget.RecyclerView;
 import butterknife.BindView;
 import butterknife.ButterKnife;
+import butterknife.OnClick;
 import song.of.god.R;
+import song.of.god.application.Base.BaseActivity;
 import song.of.god.database.entity.Chapter;
+import song.of.god.ui.ChapterDetailScreen.ChapterDetailActivity;
 
 public class ChaptersListAdapter extends RecyclerView.Adapter<ChaptersListAdapter.ChapterCardViewHolder> {
 
@@ -78,6 +82,13 @@ public class ChaptersListAdapter extends RecyclerView.Adapter<ChaptersListAdapte
         private int getRandomColor() {
             Random r = new Random();
             return Color.parseColor(colorArray[(r.nextInt((18) + 1))]);
+        }
+
+        @OnClick(R.id.chapterCard)
+        public void chapterCardClickHandler(View v){
+            Intent intent=new Intent(v.getContext(), ChapterDetailActivity.class);
+            intent.putExtra("chapter",chapter);
+            ((BaseActivity)v.getContext()).startActivity(intent);
         }
 
 

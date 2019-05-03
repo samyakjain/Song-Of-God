@@ -1,0 +1,100 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+
+<androidx.cardview.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:layout_margin="30dp"
+    app:cardCornerRadius="@dimen/card_corner_radius"
+    app:cardElevation="10dp"
+    app:cardUseCompatPadding="true">
+
+    <song.of.god.ui.ChapterDetailScreen.ViewPager.GitaScrollView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:padding="15dp">
+
+            <TextView
+                android:id="@+id/verseNumber"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerHorizontal="true"
+                android:text="अध्याय 1, श्लोक 1"
+                android:textAlignment="center"
+                android:textColor="@color/orange"
+                android:textSize="20dp" />
+
+            <TextView
+                android:id="@+id/verseTitle"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/verseNumber"
+                android:layout_centerHorizontal="true"
+                android:layout_marginTop="10dp"
+                android:text="धृतराष्ट्र उवाच |
+धर्मक्षेत्रे कुरुक्षेत्रे समवेता युयुत्सवः |
+मामकाः पाण्डवाश्चैव किमकुर्वत सञ्जय ॥1॥"
+                android:textAlignment="center"
+                android:textColor="@color/orange"
+                android:textSize="18dp"
+                android:textStyle="bold" />
+
+            <TextView
+                android:id="@+id/verseWordMeaningLegend"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/verseTitle"
+                android:layout_alignParentLeft="true"
+                android:layout_marginTop="10dp"
+                android:lineHeight="20dp"
+                android:text="शब्दार्थ"
+                android:textColor="@color/darkestgray"
+                android:textSize="16dp"
+                android:textStyle="bold" />
+
+            <TextView
+                android:id="@+id/verseWordMeaning"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/verseWordMeaningLegend"
+                android:layout_alignParentLeft="true"
+                android:layout_marginTop="5dp"
+                android:lineHeight="20dp"
+                android:text="(सज्य) हे संजय! (धर्मक्षेत्रो) धर्मभूमि (कुरुक्षेत्रो) कुरुक्षेत्रामें (समवेताः) एकत्रित (युयुत्सवः) युद्धकी इच्छावाले (मामकाः) मेरे (च) और (एव) यहाँ (पाण्डवाः) पाण्डुके पुत्रोंने (किम्) क्या (अकुर्वत) किया?"
+                android:textColor="@color/darkergray"
+                android:textSize="16dp" />
+
+            <TextView
+                android:id="@+id/verseMeaningLegend"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/verseWordMeaning"
+                android:layout_alignParentLeft="true"
+                android:layout_marginTop="10dp"
+                android:lineHeight="20dp"
+                android:text="अनुवाद"
+                android:textColor="@color/darkestgray"
+                android:textSize="16dp"
+                android:textStyle="bold" />
+
+            <TextView
+                android:id="@+id/verseMeaning"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/verseMeaningLegend"
+                android:layout_alignParentLeft="true"
+                android:layout_marginTop="5dp"
+                android:lineHeight="20dp"
+                android:text="धृतराष्ट्र बोले- हे संजय! धर्मभूमि कुरुक्षेत्र में एकत्रित, युद्ध की इच्छावाले मेरे और पाण्डु के पुत्रों ने क्या किया?"
+                android:textColor="@color/darkergray"
+                android:textSize="16dp" />
+
+
+        </RelativeLayout>
+    </song.of.god.ui.ChapterDetailScreen.ViewPager.GitaScrollView>
+</androidx.cardview.widget.CardView>

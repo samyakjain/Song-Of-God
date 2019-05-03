@@ -30,11 +30,6 @@ public class MainActivityViewModel extends BaseViewModel {
     }
 
     public void fetchAllChapters() {
-        mainActivityRepository.getAllChapters().observeForever(new Observer<Resource<List<Chapter>>>() {
-            @Override
-            public void onChanged(Resource<List<Chapter>> listResource) {
-                getChapterList().postValue(listResource);
-            }
-        });
+        mainActivityRepository.getAllChapters().observeForever(listResource -> getChapterList().postValue(listResource));
     }
 }

@@ -1,0 +1,60 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+
+<androidx.cardview.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:layout_margin="30dp"
+    app:cardCornerRadius="@dimen/card_corner_radius"
+    app:cardElevation="10dp"
+    app:cardUseCompatPadding="true">
+
+    <song.of.god.ui.ChapterDetailScreen.ViewPager.GitaScrollView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:padding="15dp">
+
+            <TextView
+                android:id="@+id/chapterTitle"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerHorizontal="true"
+                android:text="अर्जुनविषादयोग"
+                android:textAlignment="center"
+                android:textColor="@color/orange"
+                android:textSize="22dp"
+                android:textStyle="bold" />
+
+            <TextView
+                android:id="@+id/chapterSummary"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/chapterTitle"
+                android:layout_centerHorizontal="true"
+                android:layout_marginTop="10dp"
+                android:text="कुरुक्षेत्र के युद्धस्थल में सैन्यनिरीक्षण"
+                android:textAlignment="center"
+                android:textColor="@color/orange"
+                android:textSize="20dp" />
+
+            <TextView
+                android:id="@+id/chapterDescription"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/chapterSummary"
+                android:layout_centerHorizontal="true"
+                android:layout_marginTop="15dp"
+                android:lineHeight="22dp"
+                android:text="भगवद गीता का पहला अध्याय अर्जुन विशाद योग उन पात्रों और परिस्थितियों का परिचय कराता है जिनके कारण पांडवों और कौरवों के बीच महाभारत का महासंग्राम हुआ। यह अध्याय उन कारणों का वर्णन करता है जिनके कारण भगवद गीता का ईश्वरावेश हुआ। जब महाबली योद्धा अर्जुन दोनों पक्षों पर युद्ध के लिए तैयार खड़े योद्धाओं को देखते हैं तो वह अपने ही रिश्तेदारों एवं मित्रों को खोने के डर तथा फलस्वरूप पापों के कारण दुखी और उदास हो जाते हैं। इसलिए वह श्री कृष्ण को पूरी तरह से आत्मसमर्पण करते हैं। इस प्रकार, भगवद गीता के ज्ञान का प्रकाश होता है।"
+                android:textColor="@color/darkergray"
+                android:textSize="18dp" />
+
+
+        </RelativeLayout>
+    </song.of.god.ui.ChapterDetailScreen.ViewPager.GitaScrollView>
+</androidx.cardview.widget.CardView>
