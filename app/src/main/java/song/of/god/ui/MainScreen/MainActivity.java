@@ -10,6 +10,7 @@ import android.view.ViewTreeObserver;
 import android.view.animation.AccelerateInterpolator;
 import android.widget.ProgressBar;
 
+import java.util.ArrayList;
 import java.util.List;
 
 import javax.inject.Inject;
@@ -21,6 +22,7 @@ import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
 import butterknife.BindView;
 import butterknife.ButterKnife;
+import song.of.god.Ad.GitaAdClass;
 import song.of.god.R;
 import song.of.god.application.Base.BaseActivity;
 import song.of.god.database.entity.Chapter;
@@ -112,7 +114,7 @@ public class MainActivity extends BaseActivity {
     @Override
     protected void bindAndSetupUI() {
 
-        ChaptersListAdapter chaptersListAdapter = new ChaptersListAdapter();
+        ChaptersListAdapter chaptersListAdapter = new ChaptersListAdapter(this);
         LinearLayoutManager linearLayoutManager = new LinearLayoutManager(this);
         chaptersRecyclerView.setLayoutManager(linearLayoutManager);
         chaptersRecyclerView.setAdapter(chaptersListAdapter);
@@ -132,7 +134,12 @@ public class MainActivity extends BaseActivity {
             }
 
             private void updateUIForDataReceived(List<Chapter> data){
-                chaptersListAdapter.setChapterList(data);
+                ArrayList<Object> arrayListWithAds=new ArrayList<>(data);
+                arrayListWithAds.add(4,new GitaAdClass());
+                arrayListWithAds.add(9,new GitaAdClass());
+                arrayListWithAds.add(14,new GitaAdClass());
+                arrayListWithAds.add(new GitaAdClass());
+                chaptersListAdapter.setChapterList(arrayListWithAds);
                 chaptersListAdapter.notifyDataSetChanged();
                 mainActivityProgressBar.setVisibility(View.GONE);
             }

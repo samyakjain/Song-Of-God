@@ -16,6 +16,7 @@ import androidx.lifecycle.ViewModelProviders;
 import butterknife.BindView;
 import butterknife.ButterKnife;
 import fr.castorflex.android.verticalviewpager.VerticalViewPager;
+import song.of.god.Ad.GitaAdClass;
 import song.of.god.R;
 import song.of.god.application.Base.BaseActivity;
 import song.of.god.database.entity.Chapter;
@@ -92,8 +93,14 @@ public class ChapterDetailActivity extends BaseActivity {
                 ArrayList<Object> arrayList = new ArrayList<>();
                 arrayList.add(chapter);
                 arrayList.addAll(data);
+                for (int i=1;i<arrayList.size();i++){
+                    if(i%4==0){
+                        arrayList.add(i,new GitaAdClass());
+                    }
+                }
                 getVerticlePagerAdapter().setListOfItems(arrayList);
                 getVerticlePagerAdapter().notifyDataSetChanged();
+                verticalViewPager.setOffscreenPageLimit(4);
             }
         });
         getViewModel().fetchAllChapters(chapter.getChapterNumber());

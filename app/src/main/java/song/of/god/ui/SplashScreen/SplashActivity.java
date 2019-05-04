@@ -6,6 +6,8 @@ import android.os.Handler;
 import android.widget.ImageView;
 import android.widget.ProgressBar;
 
+import com.google.android.gms.ads.MobileAds;
+
 import javax.inject.Inject;
 
 import androidx.core.app.ActivityCompat;
@@ -39,6 +41,7 @@ public class SplashActivity extends BaseActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_splash);
+        MobileAds.initialize(this, "ca-app-pub-6699925777999310~1085064076");
         ButterKnife.bind(this);
         bindAndSetupUI();
     }

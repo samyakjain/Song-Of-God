@@ -64,7 +64,7 @@
                 android:layout_below="@+id/verseWordMeaningLegend"
                 android:layout_alignParentLeft="true"
                 android:layout_marginTop="5dp"
-                android:lineHeight="20dp"
+                android:lineHeight="23dp"
                 android:text="(सज्य) हे संजय! (धर्मक्षेत्रो) धर्मभूमि (कुरुक्षेत्रो) कुरुक्षेत्रामें (समवेताः) एकत्रित (युयुत्सवः) युद्धकी इच्छावाले (मामकाः) मेरे (च) और (एव) यहाँ (पाण्डवाः) पाण्डुके पुत्रोंने (किम्) क्या (अकुर्वत) किया?"
                 android:textColor="@color/darkergray"
                 android:textSize="16dp" />
@@ -89,7 +89,7 @@
                 android:layout_below="@+id/verseMeaningLegend"
                 android:layout_alignParentLeft="true"
                 android:layout_marginTop="5dp"
-                android:lineHeight="20dp"
+                android:lineHeight="23dp"
                 android:text="धृतराष्ट्र बोले- हे संजय! धर्मभूमि कुरुक्षेत्र में एकत्रित, युद्ध की इच्छावाले मेरे और पाण्डु के पुत्रों ने क्या किया?"
                 android:textColor="@color/darkergray"
                 android:textSize="16dp" />

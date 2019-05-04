@@ -13,9 +13,12 @@
         android:roundIcon="@mipmap/ic_launcher"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
-        <activity android:name=".ui.ChapterDetailScreen.ChapterDetailActivity"
-            android:theme="@style/Theme.AppCompat.Light.NoActionBar"
-            />
+
+        <meta-data
+            android:name="com.google.android.gms.ads.APPLICATION_ID"
+            android:value="ca-app-pub-6699925777999310~1085064076"/>
+
+
         <activity
             android:name=".ui.SplashScreen.SplashActivity"
             android:theme="@style/Theme.AppCompat.Light.NoActionBar">
@@ -25,9 +28,14 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
+
         <activity
             android:name=".ui.MainScreen.MainActivity"
             android:theme="@style/AppTheme.Transparent"></activity>
+
+        <activity android:name=".ui.ChapterDetailScreen.ChapterDetailActivity"
+            android:theme="@style/Theme.AppCompat.Light.NoActionBar"
+            />
     </application>
 
 </manifest>

@@ -7,6 +7,9 @@ import android.view.ViewGroup;
 import android.widget.LinearLayout;
 import android.widget.TextView;
 
+import com.google.android.gms.ads.AdRequest;
+import com.google.android.gms.ads.AdView;
+
 import java.util.ArrayList;
 import java.util.List;
 
@@ -62,19 +65,28 @@ public class VerticlePagerAdapter extends PagerAdapter {
             chapterDescription.setText(chapter.getChapterSummary());
             container.addView(itemView);
         } else {
-            Verse verse = (Verse) listOfItems.get(position);
+            Object o=listOfItems.get(position);
+            if(o instanceof Verse) {
+                Verse verse = (Verse) listOfItems.get(position);
 
-            itemView = mLayoutInflater.inflate(R.layout.verse_detail_card_layout, container, false);
-            TextView verseNumber = itemView.findViewById(R.id.verseNumber);
-            TextView verseTitle = itemView.findViewById(R.id.verseTitle);
-            TextView verseWordMeaning = itemView.findViewById(R.id.verseWordMeaning);
-            TextView verseMeaning = itemView.findViewById(R.id.verseMeaning);
+                itemView = mLayoutInflater.inflate(R.layout.verse_detail_card_layout, container, false);
+                TextView verseNumber = itemView.findViewById(R.id.verseNumber);
+                TextView verseTitle = itemView.findViewById(R.id.verseTitle);
+                TextView verseWordMeaning = itemView.findViewById(R.id.verseWordMeaning);
+                TextView verseMeaning = itemView.findViewById(R.id.verseMeaning);
 
-            verseNumber.setText("अध्याय " + chapterNumber + ", श्लोक " + verse.getVerseNumber()+"/"+(""+(listOfItems.size()-1)));
-            verseTitle.setText(verse.getText());
-            verseWordMeaning.setText(verse.getWordMeanings());
-            verseMeaning.setText(verse.getMeaning());
-            container.addView(itemView);
+                verseNumber.setText("अध्याय " + chapterNumber + ", श्लोक " + verse.getVerseNumber() + "/" + ("" + (listOfItems.size() - 1)));
+                verseTitle.setText(verse.getText());
+                verseWordMeaning.setText(verse.getWordMeanings());
+                verseMeaning.setText(verse.getMeaning());
+                container.addView(itemView);
+            }else{
+                itemView = mLayoutInflater.inflate(R.layout.ad_card_interstitial_layout, container, false);
+                AdView adView=itemView.findViewById(R.id.adView);
+                AdRequest adRequest = new AdRequest.Builder().addTestDevice("28A236962E8CB8C073DAA68C77D81655").build();
+                adView.loadAd(adRequest);
+                container.addView(itemView);
+            }
         }
         return itemView;
     }
