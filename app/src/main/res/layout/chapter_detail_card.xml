@@ -10,7 +10,7 @@
     app:cardElevation="10dp"
     app:cardUseCompatPadding="true">
 
-    <song.of.god.ui.ChapterDetailScreen.ViewPager.GitaScrollView
+    <ScrollView
         android:layout_width="match_parent"
         android:layout_height="wrap_content">
 
@@ -56,5 +56,5 @@
 
 
         </RelativeLayout>
-    </song.of.god.ui.ChapterDetailScreen.ViewPager.GitaScrollView>
+    </ScrollView>
 </androidx.cardview.widget.CardView>
