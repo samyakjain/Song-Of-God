@@ -70,7 +70,7 @@ public class VerticlePagerAdapter extends PagerAdapter {
             TextView verseWordMeaning = itemView.findViewById(R.id.verseWordMeaning);
             TextView verseMeaning = itemView.findViewById(R.id.verseMeaning);
 
-            verseNumber.setText("अध्याय " + chapterNumber + ", श्लोक " + verse.getVerseNumber());
+            verseNumber.setText("अध्याय " + chapterNumber + ", श्लोक " + verse.getVerseNumber()+"/"+(""+(listOfItems.size()-1)));
             verseTitle.setText(verse.getText());
             verseWordMeaning.setText(verse.getWordMeanings());
             verseMeaning.setText(verse.getMeaning());
