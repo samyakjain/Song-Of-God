@@ -45,7 +45,7 @@ public class ChaptersListAdapter extends RecyclerView.Adapter<RecyclerView.ViewH
     private void setupInterstialAd(Context context) {
         mInterstitialAd = new InterstitialAd(context);
         mInterstitialAd.setAdUnitId("ca-app-pub-6699925777999310/4950789910");
-        mInterstitialAd.loadAd(new AdRequest.Builder().addTestDevice("28A236962E8CB8C073DAA68C77D81655").build());
+        mInterstitialAd.loadAd(new AdRequest.Builder().build());
         mInterstitialAd.setAdListener(new AdListener() {
             @Override
             public void onAdClosed() {
@@ -164,7 +164,7 @@ public class ChaptersListAdapter extends RecyclerView.Adapter<RecyclerView.ViewH
         }
 
         public void configure() {
-            AdRequest adRequest = new AdRequest.Builder().addTestDevice("28A236962E8CB8C073DAA68C77D81655").build();
+            AdRequest adRequest = new AdRequest.Builder().build();
             mAdView.loadAd(adRequest);
         }
     }

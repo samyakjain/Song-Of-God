@@ -83,7 +83,7 @@ public class VerticlePagerAdapter extends PagerAdapter {
             }else{
                 itemView = mLayoutInflater.inflate(R.layout.ad_card_interstitial_layout, container, false);
                 AdView adView=itemView.findViewById(R.id.adView);
-                AdRequest adRequest = new AdRequest.Builder().addTestDevice("28A236962E8CB8C073DAA68C77D81655").build();
+                AdRequest adRequest = new AdRequest.Builder().build();
                 adView.loadAd(adRequest);
                 container.addView(itemView);
             }
