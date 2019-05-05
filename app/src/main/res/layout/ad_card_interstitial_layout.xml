@@ -18,7 +18,7 @@
             android:layout_gravity="center_horizontal"
             android:layout_marginTop="30dp"
             ads:adSize="MEDIUM_RECTANGLE"
-            ads:adUnitId="ca-app-pub-6699925777999310/1462971046">
+            ads:adUnitId="ca-app-pub-6699925777999310/4950789910">
         </com.google.android.gms.ads.AdView>
     </androidx.cardview.widget.CardView>
 
